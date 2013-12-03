@@ -1,0 +1,89 @@
+﻿*** Settings ***
+Documentation     A test suite with a single test for valid landing page.
+...
+...               This test has a workflow that is created using keywords in
+...               the imported resource file.
+Resource          resource.txt
+
+*** Test Cases ***
+Valid Login Page
+    Open browser to see login page
+
+Input Username and Password
+	Input Text		id_username		itbuiductai
+	Input Text		id_password		01674567099
+	
+Submit and navigate to test url
+	Click Button	login
+	Go To Test Url
+	
+*** Ignore ***
+Choose Nhap Theo Hang
+	Click Element	mark-menu
+	Click Element	textNextcell
+	
+*** Ignore ***
+Input To First Case
+	Click Element	cell_1_1_1
+	:FOR	${column}	IN RANGE	5	30
+	\		Input Text		mainInput	1
+	\		Press Key	mainInput	\\10
+	\		Table Cell Should Contain	markTable	4	${column}	1
+	Set Selenium Implicit Wait	5
+	Table Cell Should Contain	markTable	4	31	1.0
+	Set Selenium Implicit Wait	0
+	Clean Old Case
+
+*** Ignore ***
+Input To Second Case
+	Click Element	cell_1_1_1
+	:FOR	${column}	IN RANGE	5	30
+	\		Input Text		mainInput	10
+	\		Press Key	mainInput	\\10
+	\		Table Cell Should Contain	markTable	4	${column}	1
+	Set Selenium Implicit Wait	5
+	Table Cell Should Contain	markTable	4	31	10.0
+	Set Selenium Implicit Wait	0
+	Clean Old Case
+
+*** Ignore ***
+Single Cell Test
+	Input To Cell Value X And It Should Display Value Y		0		0
+	Input To Cell Value X And It Should Display Value Y		00		0
+	Input To Cell Value X And It Should Display Value Y		000		0
+	Input To Cell Value X And It Should Display Value Y		01		0.1
+	Input To Cell Value X And It Should Display Value Y		001		0.1
+	Input To Cell Value X And It Should Display Value Y		0.1		0.1
+	Input To Cell Value X And It Should Display Value Y		0.01	0.1
+	Input To Cell Value X And It Should Display Value Y		.1		.1
+	Input To Cell Value X And It Should Display Value Y		1.		1.
+	Input To Cell Value X And It Should Display Value Y		-0		0
+	Input To Cell Value X And It Should Display Value Y		-1		1
+	Input To Cell Value X And It Should Display Value Y		-2		2
+	Input To Cell Value X And It Should Display Value Y		1 		1
+	Input To Cell Value X And It Should Display Value Y		1.1		1.1
+	Input To Cell Value X And It Should Display Value Y		11		1.1
+	Input To Cell Value X And It Should Display Value Y		2		2
+	Input To Cell Value X And It Should Display Value Y		2.0		2.0
+	Input To Cell Value X And It Should Display Value Y		20		2
+	Input To Cell Value X And It Should Display Value Y		2.1		2.1
+	Input To Cell Value X And It Should Display Value Y		21		2.1
+	Input To Cell Value X And It Should Display Value Y		1.01	1.01
+	Input To Cell Value X And It Should Display Value Y		1.11	1.11
+	Input To Cell Value X And It Should Display Value Y		101		10
+	Input To Cell Value X And It Should Display Value Y		9.9		9.9
+	Input To Cell Value X And It Should Display Value Y		9.99	9.99
+	Input To Cell Value X And It Should Display Value Y		10.0	10.0
+	Input To Cell Value X And It Should Display Value Y		10.1	1.01
+	Input To Cell Value X And It Should Display Value Y		a		\
+	Input To Cell Value X And It Should Display Value Y		a1		1
+	Input To Cell Value X And It Should Display Value Y		1a		1
+	Input To Cell Value X And It Should Display Value Y		1.a		1.
+	Input To Cell Value X And It Should Display Value Y		a.1		.1
+	Input To Cell Value X And It Should Display Value Y		)		\
+	Input To Cell Value X And It Should Display Value Y		)(		\
+	Input To Cell Value X And It Should Display Value Y		)()()	\
+	Input To Cell Value X And It Should Display Value Y		{a}x	\
+	Input To Cell Value X And It Should Display Value Y		.000	.000
+	Input To Cell Value X And It Should Display Value Y		.001	.001
+	Input To Cell Value X And It Should Display Value Y		.123	.123
