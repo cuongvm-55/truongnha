@@ -18,34 +18,61 @@ Submit and navigate to test url
 	Go To Test Url
 	
 *** Ignore ***
-Choose Nhap Theo Hang
-	Click Element	mark-menu
-	Click Element	textNextcell
-	
-*** Ignore ***
-Input To First Case
+Validate Input Of First Row
+	Switch Input Type
 	Click Element	cell_1_1_1
-	:FOR	${column}	IN RANGE	5	30
+	:FOR	${column}	IN RANGE	6	30
 	\		Input Text		mainInput	1
 	\		Press Key	mainInput	\\10
-	\		Table Cell Should Contain	markTable	4	${column}	1
-	Set Selenium Implicit Wait	5
-	Table Cell Should Contain	markTable	4	31	1.0
-	Set Selenium Implicit Wait	0
-	Clean Old Case
+	\		Table Cell Should Be Equal		4	${column}	1
+	Input Text		mainInput	1
+	Click Element	cell_1_1_1
+	Result Cell Should Be Equal		4		31		1.0
 
 *** Ignore ***
-Input To Second Case
-	Click Element	cell_1_1_1
-	:FOR	${column}	IN RANGE	5	30
+Validate Input Of Second Row
+	Click Element	cell_2_1_1
+	:FOR	${column}	IN RANGE	6	30
 	\		Input Text		mainInput	10
 	\		Press Key	mainInput	\\10
-	\		Table Cell Should Contain	markTable	4	${column}	1
-	Set Selenium Implicit Wait	5
-	Table Cell Should Contain	markTable	4	31	10.0
-	Set Selenium Implicit Wait	0
-	Clean Old Case
+	\		Table Cell Should Be Equal		5	${column}	10
+	Input Text		mainInput	10
+	Click Element	cell_2_1_1
+	Result Cell Should Be Equal		5		31		10.0
 
+*** Ignore ***
+Validate Input Of Third Row
+	Switch Input Type
+	Click Element	cell_3_1_1
+	:FOR	${column}	IN RANGE	6	30
+	\		Input Text		mainInput	${column - 6}
+	\		Press Key	mainInput	\\10
+	Input Text		mainInput	24
+	Click Element	cell_3_1_1
+	Result Cell Should Be Equal		6		31		2.9
+	
+*** Ignore ***
+Validate Input Of First Column
+	Click Element	cell_1_1_1
+	:FOR	${row}	IN RANGE	4	13
+	\		Input Text		mainInput	1
+	\		Press Key	mainInput	\\10
+	\		Table Cell Should Be Equal		${row}	6		1
+	Input Text		mainInput	1
+	Click Element	cell_1_1_1
+	Table Cell Should Be Equal	13	6	1
+	
+*** Ignore ***
+Validate Input Of Second Column
+	Click Element	cell_1_1_2
+	:FOR	${row}	IN RANGE	4	13
+	\		Input Text		mainInput	10
+	\		Press Key	mainInput	\\10
+	\		Table Cell Should Be Equal		${row}	7		10
+	Input Text		mainInput	10
+	Click Element	cell_1_1_2
+	Table Cell Should Be Equal	13	7	10
+	
 *** Ignore ***
 Single Cell Test
 	Input To Cell Value X And It Should Display Value Y		0		0
@@ -80,10 +107,16 @@ Single Cell Test
 	Input To Cell Value X And It Should Display Value Y		1a		1
 	Input To Cell Value X And It Should Display Value Y		1.a		1.
 	Input To Cell Value X And It Should Display Value Y		a.1		.1
-	Input To Cell Value X And It Should Display Value Y		)		\
-	Input To Cell Value X And It Should Display Value Y		)(		\
-	Input To Cell Value X And It Should Display Value Y		)()()	\
+	Input To Cell Value X And It Should Display Value Y		)		)
+	Input To Cell Value X And It Should Display Value Y		)(		)(
 	Input To Cell Value X And It Should Display Value Y		{a}x	\
 	Input To Cell Value X And It Should Display Value Y		.000	.000
 	Input To Cell Value X And It Should Display Value Y		.001	.001
 	Input To Cell Value X And It Should Display Value Y		.123	.123
+	
+	
+*** Test Cases ***
+Validate Input Mark From File
+	Click Element	mark-menu
+	Click Element	import
+	Press Key	name=file[]		c

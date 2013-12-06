@@ -23,6 +23,11 @@ Open browser to see login page
 Go To Test Url
 	Go To	${TEST_URL}
 
+Table Cell Should Be Equal
+	[Arguments]		${row}		${column}		${expect}
+	${testValue}=	Get Table Cell		markTable	${row}		${column}
+	Should Be Equal		${testValue}	${expect}
+	
 Clean Old Case
 	Click Element	cell_1_1_1
 	:FOR	${column}	IN RANGE	5	30
@@ -34,4 +39,15 @@ Input To Cell Value X And It Should Display Value Y
 	Click Element	cell_1_1_1
 	Input Text		mainInput	${input}
 	Press Key	mainInput	\\10
-	Table Cell Should Contain	markTable	4	6	${expect}
+	${testValue}=	Get Table Cell		markTable	4	6
+	Should Be Equal		${testValue}	${expect}
+	
+Switch Input Type
+	Click Element	mark-menu
+	Click Element	textNextcell
+	
+Result Cell Should Be Equal
+	[Arguments]		${row}		${column}		${expect}
+	Set Selenium Implicit Wait	5
+	Table Cell Should Be Equal		${row}		${column}		${expect}
+	Set Selenium Implicit Wait	0
