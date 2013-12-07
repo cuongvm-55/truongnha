@@ -6,7 +6,7 @@ Kiểm thử chức năng ở truongnha.com
 
 1. Lò May Thy (Nhóm trưởng)   MSSV: 10020354
 2. Bùi Đức Tài                MSSV:
-3. Vy Mạnh Cường              MSSV:
+3. Vy Mạnh Cường              MSSV: 10020045
 
 ## Các chức năng được kiểm thử ##
 1. Nhập điểm ``` nhapdiem_tests ```
