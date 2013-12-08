@@ -1,13 +1,3 @@
-﻿'''from selenium import webdriver
-def	NumOfRows(URL, Xpath):
-	driver = webdriver.Firefox()
-	driver.get(URL)
-	rowCount = driver.get_Xpath_Count(Xpath)
-	driver.close()
-	return rowCount
-	
-'''
-
 def avgs(args=[]):
 	'''
 		Tính trung bình cộng của dãy tham số
@@ -23,9 +13,6 @@ def avgs(args=[]):
 		return average
 	else:
 		return 0
-		
-list = [6.5, 7.0, 6.8, 7.4, 7.7, 7.8, 7.3, 8.1, 8.2, 7.8, 7.2, 8.0, 8.7]
-print	avgs(list)
 
 def append_to_list( list_, *values):
 	'''Adds `values` to the end of `list`.
@@ -56,15 +43,6 @@ def combine_lists(*lists):
 	for item in lists:
 		ret.extend(item)
 	return ret
-
-def	reset_list(_list):
-	_list = []
-	
-_list = [1,2,3]
-reset_list(_list)
-
-
-print	_list
 
 def	add(arg1, arg2):
 	num1 = float(arg1)
