@@ -14,7 +14,7 @@ Kiểm thử chức năng ở truongnha.com
 3. Xếp loại, xét lên lớp ``` xeploai_xetlenlop_tests ```
 
 ## Công cụ kiểm thử ##
-Robot Framework - robotframework.org. Thư viện ```selenium2library```
+Robot Framework - robotframework.org. Thư viện ```selenium2library```. Thư viện tự định nghĩa ```ReusableModule.py```
 
 ## Hướng dẫn kiểm thử ##
 Sau khi cài đặt Robot Framework, trên màn hình Command Line, gõ lệnh: ``` pybot <thư mục đặt tài liệu> ``` để chạy các ca kiểm thử.
