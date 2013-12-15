@@ -5,19 +5,23 @@ Documentation     A resource file with reusable keywords and variables.
 ...               domain specific language. They utilize keywords provided
 ...               by the imported Selenium2Library.
 Library           Selenium2Library
+
 Library			  ReusableModule
+
 *** Variables ***
 ${SERVER}         truongnha.com
 ${BROWSER}        Firefox
 ${DELAY}          0
-${VALID_USER}     cuongvm
-${VALID_PASSWORD}	tapkindrey11
+${VALID USER}     cuongvm
+${VALID PASSWORD}	tapkindrey11
 ${LOGIN URL}      http://${SERVER}/login/
 ${WELCOME URL}    http://${SERVER}/school/
 ${ERROR URL}      http://${SERVER}/login/
-${CLASS MANAGER LINK} 	${WELCOME URL}viewClassDetail/1401
-${RESULT LINK}    ${WELCOME URL}xepLoaiHlTheoLop/1401/1
-${index}			0
+${VIEW CLASS DETAIL}	/school/viewClassDetail
+${VIEW STUDENT DETAIL}	/school/viewStudentDetail
+
+${CLASS ID}		1401
+${NUMBER OF STUDENTS} 	6
 
 *** Keywords ***
 Open Browser To Login Page
@@ -50,15 +54,15 @@ Welcome Page Should Be Open
 
 Login To System
 	Open Browser To Login Page
-    Input Username    cuongvm
-    Input Password    tapkindrey11
+    Input Username    ${VALID USER}
+    Input Password    ${VALID PASSWORD}
     Submit Credentials
 
 Goto Class Manager
-	Go To 	${CLASS MANAGER LINK}
-
-View Result
-	Click Element    id=btn-tongket
+	Click Link		${VIEW CLASS DETAIL}/${CLASS ID}
+	
+Goto Mark Summary
+	Click Element    btn-tongket
 
 Result Cell Should Be Equal
 	[Arguments]                ${row}                ${column}                ${expect}
