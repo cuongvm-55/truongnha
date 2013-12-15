@@ -1,7 +1,10 @@
+<<<<<<< HEAD
 ﻿# -*- coding: utf-8 -*- 
 import sys
 sys.setrecursionlimit(100) # 10000 is an example, try with different values
 
+=======
+>>>>>>> 1e8efc9a5ea381ea1f8f6c2b6b4de035df093163
 def avgs(args=[]):
 	'''
 		Tính trung bình cộng của dãy tham số
