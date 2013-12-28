@@ -16,7 +16,7 @@ Input Username and Password
 Submit and navigate to test url
 	Click Button	login
 	Go To Test Url
-
+*** Test Cases ***
 nhap dung chuan
 	Assign Id To Element  xpath=//tr[@class="27894"]/td[@class="col1 hk-thang"]/input[@class="hk"]  cell
 	Input To Cell Value X And It Should Display Value Y		cell	T		T
@@ -36,7 +36,7 @@ nhap sai chuan
 	Input To Cell Value X And It Should Display Value Y		cell	g		\
 	
 *** Test Cases ***
-Select Group
+xem hanh kiem cua cac lop
 	Click Element  xpath=//select[@id="id_class"]/option[@value=1401]
 	List Selection Should Be  xpath=//select[@id="id_class"]	10 B
 	
