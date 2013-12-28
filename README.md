@@ -1,4 +1,4 @@
-Kiểm thử Trường Nhà Nhóm 2
+Kiểm thử Trường Nhà - Nhóm 2
 ============
 Kiểm thử chức năng ở truongnha.com
 
