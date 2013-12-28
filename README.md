@@ -9,7 +9,10 @@ Kiểm thử chức năng ở truongnha.com
 3. Vy Mạnh Cường              MSSV: 10020045
 
 ## Công cụ kiểm thử ##
-Robot Framework - robotframework.org. Thư viện ```selenium2library```.\n
+Robot Framework - robotframework.org.
+
+Thư viện ```selenium2library```.
+
 Thư viện tự định nghĩa ```ReusableModule.py```
 
 ## Hướng dẫn kiểm thử ##
@@ -22,6 +25,7 @@ Sau khi cài đặt Robot Framework, trên màn hình Command Line, gõ lệnh: 
 
 ## Các ca kiểm thử đã viết ##
 I - Nhập điểm (5/5)
+
 1. Kiểm thử một hàng dữ liệu PASSED
 2. Kiểm thử một cột dữ liệu PASSED
 3. Kiểm thử một ô dữ liệu PASSED
