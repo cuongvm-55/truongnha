@@ -17,16 +17,29 @@ Submit and navigate to test url
 	Click Button	login
 	Go To Test Url
 
-Single Cell Test
+nhap dung chuan
 	Assign Id To Element  xpath=//tr[@class="27894"]/td[@class="col1 hk-thang"]/input[@class="hk"]  cell
+	Input To Cell Value X And It Should Display Value Y		cell	T		T
+	Input To Cell Value X And It Should Display Value Y		cell	K		K
+	Input To Cell Value X And It Should Display Value Y		cell	B		TB
+	Input To Cell Value X And It Should Display Value Y		cell	Y		Y
+*** Test Cases ***
+nhap dung nhung khong theo chuan
 	Input To Cell Value X And It Should Display Value Y		cell	t		T
-	Input To Cell Value X And It Should Display Value Y		cell	k		K
-	Input To Cell Value X And It Should Display Value Y		cell	b		TB
-	Input To Cell Value X And It Should Display Value Y		cell	y		Y
-	Input To Cell Value X And It Should Display Value Y		cell	tb		T
 	Input To Cell Value X And It Should Display Value Y		cell	kdk		K
+	Input To Cell Value X And It Should Display Value Y		cell	kdk		K
+	Input To Cell Value X And It Should Display Value Y		cell	b		TB
+	Input To Cell Value X And It Should Display Value Y		cell	yd		Y
+*** Test Cases ***
+nhap sai chuan
+	Input To Cell Value X And It Should Display Value Y		cell	z		\
 	Input To Cell Value X And It Should Display Value Y		cell	g		\
-
+	
+*** Test Cases ***
+Select Group
+	Click Element  xpath=//select[@id="id_class"]/option[@value=1401]
+	List Selection Should Be  xpath=//select[@id="id_class"]	10 B
+	
 *** Test Cases ***
 user export_file
 	Click Element	export
