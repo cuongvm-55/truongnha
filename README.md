@@ -5,7 +5,7 @@ Kiểm thử chức năng ở truongnha.com
 ## Các sinh viên tham gia kiểm thử ##
 
 1. Lò May Thy (Nhóm trưởng)   MSSV: 10020354
-2. Bùi Đức Tài                MSSV:
+2. Bùi Đức Tài                MSSV: 10020302
 3. Vy Mạnh Cường              MSSV: 10020045
 
 ## Công cụ kiểm thử ##
@@ -33,7 +33,12 @@ I - Nhập điểm (5/5)
 5. Xuất ra Excel (kiểm thử bằng tay) PASSED
 
 II - Nhập hạnh kiểm (/)
-
+1. Kiểm thử nhập hạnh kiểm đúng chuẩn hiển thị(T,K,TB,Y)              PASSED
+2. Kiểm thử nhập hạnh kiểm đúng nhưng sai chuẩn hiển thị(t,k,b,y,...) PASSED
+3. Kiểm thử nhập hạnh kiểm không đúng       PASSED
+4. Kiểm thử chức năng xem hạnh kiểm theo lớp học PASSED
+5. Kiểm thử chức năng import File(kiểm thử bằng tay)  PASSED
+6. Kiểm thử chức năng export File(kiểm thử bằng tay)  PASSED
 II - Xếp loại, xét lên lớp (/)
 
 ## Các lỗi phát hiện mà không thể kiểm thử ##
