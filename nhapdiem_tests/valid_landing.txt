@@ -9,15 +9,17 @@ Resource          resource.txt
 Valid Login Page
     Open browser to see login page
 
+
 Input Username and Password
 	Input Text		id_username		itbuiductai
 	Input Text		id_password		01674567099
 	
+
 Submit and navigate to test url
 	Click Button	login
 	Go To Test Url
 	
-*** Ignore ***
+
 Validate Input Of First Row
 	Switch Input Type
 	Click Element	cell_1_1_1
@@ -29,7 +31,7 @@ Validate Input Of First Row
 	Click Element	cell_1_1_1
 	Result Cell Should Be Equal		4		31		1.0
 
-*** Ignore ***
+
 Validate Input Of Second Row
 	Click Element	cell_2_1_1
 	:FOR	${column}	IN RANGE	6	30
@@ -40,9 +42,8 @@ Validate Input Of Second Row
 	Click Element	cell_2_1_1
 	Result Cell Should Be Equal		5		31		10.0
 
-*** Ignore ***
+
 Validate Input Of Third Row
-	Switch Input Type
 	Click Element	cell_3_1_1
 	:FOR	${column}	IN RANGE	6	30
 	\		Input Text		mainInput	${column - 6}
@@ -51,8 +52,9 @@ Validate Input Of Third Row
 	Click Element	cell_3_1_1
 	Result Cell Should Be Equal		6		31		2.9
 	
-*** Ignore ***
+
 Validate Input Of First Column
+	Switch Input Type
 	Click Element	cell_1_1_1
 	:FOR	${row}	IN RANGE	4	13
 	\		Input Text		mainInput	1
@@ -62,7 +64,7 @@ Validate Input Of First Column
 	Click Element	cell_1_1_1
 	Table Cell Should Be Equal	13	6	1
 	
-*** Ignore ***
+
 Validate Input Of Second Column
 	Click Element	cell_1_1_2
 	:FOR	${row}	IN RANGE	4	13
@@ -73,7 +75,7 @@ Validate Input Of Second Column
 	Click Element	cell_1_1_2
 	Table Cell Should Be Equal	13	7	10
 	
-*** Ignore ***
+
 Single Cell Test
 	Input To Cell Value X And It Should Display Value Y		0		0
 	Input To Cell Value X And It Should Display Value Y		00		0
@@ -115,8 +117,9 @@ Single Cell Test
 	Input To Cell Value X And It Should Display Value Y		.123	.123
 	
 	
-*** Test Cases ***
+
 Validate Input Mark From File
+	Set Browser Implicit Wait	5
 	Click Element	mark-menu
 	Click Element	import
-	Press Key	name=file[]		c
+	Choose File		name=files[]		D:/Documents/Dropbox/HKVII/INT3117/truongnha_test/bang_diem_10_A_Toan_HK1.xls
