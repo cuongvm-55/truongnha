@@ -8,14 +8,22 @@ Kiểm thử chức năng ở truongnha.com
 2. Bùi Đức Tài                MSSV:
 3. Vy Mạnh Cường              MSSV: 10020045
 
+## Công cụ kiểm thử ##
+Robot Framework - robotframework.org. Thư viện ```selenium2library```.
+Thư viện tự định nghĩa ```ReusableModule.py```
+
+## Hướng dẫn kiểm thử ##
+Sau khi cài đặt Robot Framework, trên màn hình Command Line, gõ lệnh: ``` pybot <thư mục đặt tài liệu> ``` để chạy các ca kiểm thử. Ví dụ: ``` pybot nhapdiem_tests ```.
+
 ## Các chức năng được kiểm thử ##
 1. Nhập điểm ``` nhapdiem_tests ```
 2. Nhập hạnh kiểm ``` nhaphanhkiem_tests ```
 3. Xếp loại, xét lên lớp ``` xeploai_xetlenlop_tests ```
 
-## Công cụ kiểm thử ##
-Robot Framework - robotframework.org. Thư viện ```selenium2library```. Thư viện tự định nghĩa ```ReusableModule.py```
+## Các ca kiểm thử đã viết ##
 
-## Hướng dẫn kiểm thử ##
-Sau khi cài đặt Robot Framework, trên màn hình Command Line, gõ lệnh: ``` pybot <thư mục đặt tài liệu> ``` để chạy các ca kiểm thử.
-Ví dụ: ``` pybot nhapdiem_tests ```.
+## Các lỗi phát hiện mà không thể kiểm thử
+
+## Những khó khăn khi thực hiện ##
+
+# Các góp ý cho hệ thống ##
