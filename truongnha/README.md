@@ -72,6 +72,7 @@ III - Xếp loại, xét lên lớp (/)
     
     - 3.5 > TB, có 2 môn mà TB < 2.0 trở lên
    
+  
     
 2. Kiểm thử xét lên lớp (Kiểm thử xét danh hiệu)
 
@@ -92,6 +93,7 @@ III - Xếp loại, xét lên lớp (/)
     - Học lực Kém
     - Hạnh kiểm Trung Bình
     - Hạnh kiểm Yếu
+
 
 3. Kiểm thử tính điểm trung bình cả năm của từng học sinh
     
