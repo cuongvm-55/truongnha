@@ -6,54 +6,90 @@ Documentation     Kiểm thử Module tính điểm trung bình cả năm, xét 
 Resource          resource.txt
 
 *** Test Cases ***
-Kiem Tra Bang tong ket Diem, Thi Dua va Xep Loai
-    [SetUp]		Login To System
-	
+Kiem Tra Module Tinh Diem Trung Binh
+	[SetUp]		Login To System
 	Goto Class Manager
 	Goto Mark Summary
-	
-	Test Mark Summary Table
-	
+	Test ALL Mark Average
+
+Test Xet Hoc Luc Gioi
+	Test Hoc Luc Gioi
+
+Test Xet Hoc luc Kha
+	Test Hoc Luc Kha
+
+Test Xet Hoc Luc Trung Binh
+	Test Hoc Luc Trung Binh
+
+Test Xet Hoc Luc Yeu
+	Test Hoc Luc Yeu
+
+Test Xet Hoc Luc Kem
+	Test Hoc Luc Kem
+
+Test Xet Danh Hieu HSG
+	Test Danh Hieu HSG
+
+Test Xet Danh Hieu HSTT
+	Test Danh Hieu HSTT
+
+Test Xet Danh Hieu Khong Xep Loai
+	Test Danh Hieu Khong Xep Loai
 	[Teardown]    Close Browser
 
 *** Variables ***
-${START ROW}	3					
+${START ROW}	3
 
 *** Keywords ***
-#Test Tính điểm trung bình chung, Xếp loại và Danh hiệu của tất cả học sinh
-Test Mark Summary Table
+
+#Test Module Tính điểm trung bình chung của từng học sinh
+Test All Mark Average
 	${END ROW}=		add		${START ROW}	${NUMBER OF STUDENTS}
-	Set Test Variable	${TR CLASS NAME}	27900					#Tên class tr đầu tiên-dòng đầu tiên chứa dữ liệu
-	Set Test Variable	${HANHKIEM CLASS NAME}	"input-mini hk"		#Tên class input chứa Hạnh kiểm
-	
-	Set Test Variable	${DIEM DAT}		"Đ"							#Điểm đánh giá thể dục
-	Set Test Variable	${DIEM CHUA DAT}	"CĐ"
-	
 	:FOR	${rowNumber}	IN RANGE	${START ROW} 	${END ROW}
-	\		${Hanh Kiem}=	Get Value	xpath=//tr[@class="${TR CLASS NAME}"]/td/input[@class=${HANHKIEM CLASS NAME}]
-	\		${Diem The Duc}=	Get Table Cell		mark-table		${rowNumber}	16
 	\		${Diem Part 1}=		Get Mark	${rowNumber}	5	16
 	\		${Diem Part 2}=		Get Mark	${rowNumber}	17	19
 	\		${Bang Diem}=	Create List  	#Bảng điểm
 	\		${Bang Diem}=	Combine Lists	${Diem Part 1}	${Diem Part 2}
-	
-	#Test điểm trung bình chung
 	\		${This Average}=		Get Table Cell		mark-table		${rowNumber}	19
-	\		Test Mark Average	${Bang Diem}		${This Average}
-	
-	#Xét Học lực
-	\		${Expected Hoc Luc}=		Xet Hoc Luc		${Diem The Duc}		${This Average}		${Bang Diem}
-	\		${This Hoc Luc}=	Get Table Cell		mark-table		${rowNumber}	20
-	\		Should Be Equal		${This Hoc Luc}	 	${Expected Hoc Luc}
-	
-	#Xét Danh hiệu
-	\		${Expected Danh Hieu}=		Xet Danh Hieu	${Expected Hoc Luc}	  ${Hanh Kiem}
-	\		${This Danh Hieu}=	Get Table Cell		mark-table		${rowNumber}	22
-	\		Should Be Equal		${This Danh Hieu}	${Expected Danh Hieu}
-	
-	#Xét biến cho vòng lặp sau
-	\		${TR CLASS NAME}= 	add		${TR CLASS NAME}	1
+	\		Test Mark Average		${Bang Diem}		${This Average}
 
+#Test Module Xét Học lực
+Test Hoc Luc Gioi
+	Test Hoc Luc	3		3 		Giỏi
+
+Test Hoc Luc Kha
+	Test Hoc Luc	4		6 		Khá
+
+Test Hoc Luc Trung Binh
+	Test Hoc Luc	7		9 		TB
+	
+Test Hoc Luc Yeu
+	Test Hoc Luc	10		13 		Yếu
+
+Test Hoc Luc Kem
+	Test Hoc Luc	14		14 		Kém
+
+Test Hoc Luc
+	[Arguments]		${beginRow}	    ${endRow}    ${expected}
+	:FOR 	${rowNumber}	IN RANGE	${beginRow}	${endRow}
+	\		Table Cell Should Contain	mark-table 		${rowNumber}	20		${expected}
+
+#Test Module Xét Danh hiệu
+Test Danh Hieu HSG
+	Test Danh Hieu		15		15		HSG
+
+Test Danh Hieu HSTT
+	Test Danh Hieu		16		19		HSTT
+	
+Test Danh Hieu Khong Xep Loai
+	Test Danh Hieu		20		25		\
+
+Test Danh Hieu
+	[Arguments]		${beginRow}		${endRow}	${Expected Danh Hieu}
+	:FOR  ${rowNumber}	 IN RANGE	${beginRow}	${endRow}
+	#\		Table Cell Should Contain		mark-table		${rowNumber}	22		${Expected Danh Hieu}
+	\		${value}=		Get Table Cell		mark-table		${rowNumber}	22
+	\		Log		${value}
 #Test Tính điểm trung bình chung của 1 học sinh
 Test Mark Average
 	[Arguments]		${Diem}		${thisAvg}
@@ -75,15 +111,3 @@ Calculate Average
 	[Return]	${avg}
 	[Arguments]		${list}
 	${avg}=		avgs	${list}
-		
-#Xét Học lực của 1 học sinh
-Xet Hoc Luc
-	[Arguments]		${Diem The Duc}		${This Average}		${thisDiem}
-	[Return]	${Hoc luc}
-	${Hoc luc}=		Tinh Hoc Luc	${Diem The Duc}		${This Average}		${thisDiem}
-
-#Xét danh hiệu Tiên tiến, Khá giỏi
-Xet Danh Hieu
-	[Arguments]		${Hoc luc} 	${Hanh kiem}
-	[Return]	${Danh hieu}
-	${Danh hieu}= 	Tinh Danh Hieu	${Hoc luc}	${Hanh kiem}

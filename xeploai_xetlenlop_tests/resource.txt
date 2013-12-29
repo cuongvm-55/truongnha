@@ -21,7 +21,7 @@ ${VIEW CLASS DETAIL}	/school/viewClassDetail
 ${VIEW STUDENT DETAIL}	/school/viewStudentDetail
 
 ${CLASS ID}		1401
-${NUMBER OF STUDENTS} 	6
+${NUMBER OF STUDENTS} 	21
 
 *** Keywords ***
 Open Browser To Login Page
