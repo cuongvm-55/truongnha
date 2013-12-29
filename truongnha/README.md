@@ -41,14 +41,13 @@ II - Nhập hạnh kiểm (/)
 5. Kiểm thử chức năng import File(kiểm thử bằng tay)  PASSED
 6. Kiểm thử chức năng export File(kiểm thử bằng tay)  PASSED
 
-III - Xếp loại, xét lên lớp (/21)
+III - Xếp loại, xét lên lớp (/20)
 
 1. Kiểm thử Xét học lực (kiểm các điều kiện từ học lực Giỏi trở xuống đến học lực Kém) (12 ca kiểm thử)
 
-    1.1. Học lực Giỏi (2 ca kiểm thử)
+    1.1. Học lực Giỏi (1 ca kiểm thử)
     
-    - (Trung bình chung) TB >= 8.0, TB Văn >= 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
-    - TB >= 8.0, TB Toán >= 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
+    - (Trung bình chung) TB >= 8.0, TB Văn hoặc TB Toán >= 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
         
     1.2. Học lực Khá (3 ca kiểm thử)
     - 6.5 <= TB < 8.0, TB Văn hoặc TB Toán >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
