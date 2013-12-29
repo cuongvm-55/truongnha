@@ -1,0 +1,125 @@
+﻿*** Settings ***
+Documentation     A test suite with a single test for valid landing page.
+...
+...               This test has a workflow that is created using keywords in
+...               the imported resource file.
+Resource          resource.txt
+
+*** Test Cases ***
+Valid Login Page
+    Open browser to see login page
+
+
+Input Username and Password
+	Input Text		id_username		itbuiductai
+	Input Text		id_password		01674567099
+	
+
+Submit and navigate to test url
+	Click Button	login
+	Go To Test Url
+	
+
+Validate Input Of First Row
+	Switch Input Type
+	Click Element	cell_1_1_1
+	:FOR	${column}	IN RANGE	6	30
+	\		Input Text		mainInput	1
+	\		Press Key	mainInput	\\10
+	\		Table Cell Should Be Equal		4	${column}	1
+	Input Text		mainInput	1
+	Click Element	cell_1_1_1
+	Result Cell Should Be Equal		4		31		1.0
+
+
+Validate Input Of Second Row
+	Click Element	cell_2_1_1
+	:FOR	${column}	IN RANGE	6	30
+	\		Input Text		mainInput	10
+	\		Press Key	mainInput	\\10
+	\		Table Cell Should Be Equal		5	${column}	10
+	Input Text		mainInput	10
+	Click Element	cell_2_1_1
+	Result Cell Should Be Equal		5		31		10.0
+
+
+Validate Input Of Third Row
+	Click Element	cell_3_1_1
+	:FOR	${column}	IN RANGE	6	30
+	\		Input Text		mainInput	${column - 6}
+	\		Press Key	mainInput	\\10
+	Input Text		mainInput	24
+	Click Element	cell_3_1_1
+	Result Cell Should Be Equal		6		31		2.9
+	
+
+Validate Input Of First Column
+	Switch Input Type
+	Click Element	cell_1_1_1
+	:FOR	${row}	IN RANGE	4	13
+	\		Input Text		mainInput	1
+	\		Press Key	mainInput	\\10
+	\		Table Cell Should Be Equal		${row}	6		1
+	Input Text		mainInput	1
+	Click Element	cell_1_1_1
+	Table Cell Should Be Equal	13	6	1
+	
+
+Validate Input Of Second Column
+	Click Element	cell_1_1_2
+	:FOR	${row}	IN RANGE	4	13
+	\		Input Text		mainInput	10
+	\		Press Key	mainInput	\\10
+	\		Table Cell Should Be Equal		${row}	7		10
+	Input Text		mainInput	10
+	Click Element	cell_1_1_2
+	Table Cell Should Be Equal	13	7	10
+	
+
+Single Cell Test
+	Input To Cell Value X And It Should Display Value Y		0		0
+	Input To Cell Value X And It Should Display Value Y		00		0
+	Input To Cell Value X And It Should Display Value Y		000		0
+	Input To Cell Value X And It Should Display Value Y		01		0.1
+	Input To Cell Value X And It Should Display Value Y		001		0.1
+	Input To Cell Value X And It Should Display Value Y		0.1		0.1
+	Input To Cell Value X And It Should Display Value Y		0.01	0.1
+	Input To Cell Value X And It Should Display Value Y		.1		.1
+	Input To Cell Value X And It Should Display Value Y		1.		1.
+	Input To Cell Value X And It Should Display Value Y		-0		0
+	Input To Cell Value X And It Should Display Value Y		-1		1
+	Input To Cell Value X And It Should Display Value Y		-2		2
+	Input To Cell Value X And It Should Display Value Y		1 		1
+	Input To Cell Value X And It Should Display Value Y		1.1		1.1
+	Input To Cell Value X And It Should Display Value Y		11		1.1
+	Input To Cell Value X And It Should Display Value Y		2		2
+	Input To Cell Value X And It Should Display Value Y		2.0		2.0
+	Input To Cell Value X And It Should Display Value Y		20		2
+	Input To Cell Value X And It Should Display Value Y		2.1		2.1
+	Input To Cell Value X And It Should Display Value Y		21		2.1
+	Input To Cell Value X And It Should Display Value Y		1.01	1.01
+	Input To Cell Value X And It Should Display Value Y		1.11	1.11
+	Input To Cell Value X And It Should Display Value Y		101		10
+	Input To Cell Value X And It Should Display Value Y		9.9		9.9
+	Input To Cell Value X And It Should Display Value Y		9.99	9.99
+	Input To Cell Value X And It Should Display Value Y		10.0	10.0
+	Input To Cell Value X And It Should Display Value Y		10.1	1.01
+	Input To Cell Value X And It Should Display Value Y		a		\
+	Input To Cell Value X And It Should Display Value Y		a1		1
+	Input To Cell Value X And It Should Display Value Y		1a		1
+	Input To Cell Value X And It Should Display Value Y		1.a		1.
+	Input To Cell Value X And It Should Display Value Y		a.1		.1
+	Input To Cell Value X And It Should Display Value Y		)		)
+	Input To Cell Value X And It Should Display Value Y		)(		)(
+	Input To Cell Value X And It Should Display Value Y		{a}x	\
+	Input To Cell Value X And It Should Display Value Y		.000	.000
+	Input To Cell Value X And It Should Display Value Y		.001	.001
+	Input To Cell Value X And It Should Display Value Y		.123	.123
+	
+	
+
+Validate Input Mark From File
+	Set Browser Implicit Wait	5
+	Click Element	mark-menu
+	Click Element	import
+	Choose File		name=files[]		D:/Documents/Dropbox/HKVII/INT3117/truongnha_test/bang_diem_10_A_Toan_HK1.xls

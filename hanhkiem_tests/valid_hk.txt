@@ -1,0 +1,52 @@
+*** Settings ***
+Documentation     A test suite with a single test for valid landing page.
+...
+...               This test has a workflow that is created using keywords in
+...               the imported resource file.
+Resource          resource.txt
+
+*** Test Cases ***
+Valid Login Page
+    Open browser to see login page
+
+Input Username and Password
+	Input Text		id_username		taibd
+	Input Text		id_password		01674567099
+	
+Submit and navigate to test url
+	Click Button	login
+	Go To Test Url
+*** Test Cases ***
+nhap dung chuan
+	Assign Id To Element  xpath=//tr[@class="27894"]/td[@class="col1 hk-thang"]/input[@class="hk"]  cell
+	Input To Cell Value X And It Should Display Value Y		cell	T		T
+	Input To Cell Value X And It Should Display Value Y		cell	K		K
+	Input To Cell Value X And It Should Display Value Y		cell	B		TB
+	Input To Cell Value X And It Should Display Value Y		cell	Y		Y
+*** Test Cases ***
+nhap dung nhung khong theo chuan
+	Input To Cell Value X And It Should Display Value Y		cell	t		T
+	Input To Cell Value X And It Should Display Value Y		cell	kdk		K
+	Input To Cell Value X And It Should Display Value Y		cell	kdk		K
+	Input To Cell Value X And It Should Display Value Y		cell	b		TB
+	Input To Cell Value X And It Should Display Value Y		cell	yd		Y
+*** Test Cases ***
+nhap sai chuan
+	Input To Cell Value X And It Should Display Value Y		cell	z		\
+	Input To Cell Value X And It Should Display Value Y		cell	g		\
+	
+*** Test Cases ***
+xem hanh kiem cua cac lop
+	Click Element  xpath=//select[@id="id_class"]/option[@value=1401]
+	List Selection Should Be  xpath=//select[@id="id_class"]	10 B
+	
+*** Test Cases ***
+user export_file
+	Click Element	export
+	
+	
+	
+
+	
+	
+	
