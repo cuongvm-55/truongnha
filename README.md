@@ -42,9 +42,9 @@ II - Nhập hạnh kiểm (6/6)
 5. Kiểm thử chức năng import File(kiểm thử bằng tay)  PASSED
 6. Kiểm thử chức năng export File(kiểm thử bằng tay)  PASSED
 
-III - Xếp loại, xét lên lớp (5/5)
+III - Xếp loại, xét lên lớp (9/9)
 
-1. Kiểm thử Xét học lực (kiểm các điều kiện từ học lực Giỏi trở xuống đến học lực Kém) (12 ca kiểm thử)
+1. Kiểm thử Xét học lực (kiểm các điều kiện từ học lực Giỏi trở xuống đến học lực Kém)
 
     1.1. Học lực Giỏi
     
