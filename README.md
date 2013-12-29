@@ -16,7 +16,8 @@ Thư viện ```selenium2library```.
 Thư viện tự định nghĩa ```ReusableModule.py```
 
 ## Hướng dẫn kiểm thử ##
-Sau khi cài đặt Robot Framework, trên màn hình Command Line, gõ lệnh: ``` pybot <thư mục đặt tài liệu> ``` để chạy các ca kiểm thử. Ví dụ: ``` pybot nhapdiem_tests ```.
+- Sau khi cài đặt Robot Framework, trên màn hình Command Line, gõ lệnh: ``` pybot <thư mục đặt tài liệu> ``` để chạy các ca kiểm thử. Ví dụ: ``` pybot nhapdiem_tests ```.
+- Module Xếp loại, xét lên lớp: vào thư mục ``` xeploai_xetlenlop_tests ```, gõ lệnh ```pybot   test_mark_summary.txt```
 
 ## Các chức năng được kiểm thử (3) ##
 1. Nhập điểm ``` nhapdiem_tests ```
