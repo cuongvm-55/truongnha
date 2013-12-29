@@ -50,26 +50,27 @@ III - Xếp loại, xét lên lớp (/20)
     - (Trung bình chung) TB >= 8.0, TB Văn hoặc TB Toán >= 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
         
     1.2. Học lực Khá (3 ca kiểm thử)
-    - 6.5 <= TB < 8.0, TB Văn hoặc TB Toán >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
-    - 8.0 <= TB, 6.5 <= TB Văn hoặc TB Toán < 8.0, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
+    
+    - 8.0 <= TB, 6.5 <= TB Văn và TB Toán < 8.0, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
     - 8.0 <= TB, TB Văn hoặc TB Toán >= 6.5, có 1 môn 5.0 <= TB <= 6.5, điểm Thể dục điểm Đạt
+    - 6.5 <= TB < 8.0, TB Văn hoặc TB Toán >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
     
     1.3. Học lực Trung Bình (3 ca kiểm thử)
     
-    - 5.0 <= TB < 6.5, TB Toán hoặc TB Văn >= 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Đạt
     - 6.5 <= TB, 5.0 <= TB Toán hoặc TB Văn < 6.5, không có môn nào TB <= 3.5, điểm Thể dục điểm Đạt
     - 6.5 <= TB, TB Toán hoặc TB Văn >= 5.0, có 1 môn 3.5 <= TB < 5.0, điểm Thể dục điểm Đạt
+    - 5.0 <= TB < 6.5, TB Toán hoặc TB Văn >= 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Đạt
     
     1.4. Học lực Yếu (3 ca kiểm thử)
     
-    - 3.5 <= TB < 5.0, không có môn nào TB <= 2.0
-    - 3.5 <= TB, có 1 môn 2.0 <= TB < 3.5
+    - 5.0 <= TB, có 1 môn 2.0 <= TB < 3.5
     - 5.0 <= TB, không có môn nào TB <= 2.0, điểm Thể dục điểm Chưa Đạt
+    - 3.5 <= TB < 5.0, không có môn nào TB <= 2.0
     
     1.5. Học lực Kém (2 ca kiểm thử)
     
     - 3.5 > TB
-    - có 1 môn TB < 2.0
+    - có 1 môn TB < 2.0, TB chung tùy ý
     
 2. Kiểm thử xét lên lớp (Kiểm thử xét danh hiệu) (8 ca kiểm thử)
 
@@ -81,6 +82,7 @@ III - Xếp loại, xét lên lớp (/20)
     
     - Học lực Giỏi, Hạnh kiểm Khá
     - Học lực Khá, Hạnh kiểm Tốt
+    - Học lực Khá, Hạnh kiểm Khá
     
     2.3. Không xếp loại danh hiệu (5 ca kiểm thử)
     
