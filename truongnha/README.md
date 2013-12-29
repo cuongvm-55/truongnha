@@ -86,11 +86,11 @@ III - Xếp loại, xét lên lớp (/21)
     
     2.3. Không xếp loại danh hiệu (5 ca kiểm thử)
     
-    - Hạnh kiểm Trung Bình
-    - Hạnh kiểm Yếu
     - Học lực Trung Bình
     - Học lực Yếu
     - Học lực Kém
+    - Hạnh kiểm Trung Bình
+    - Hạnh kiểm Yếu
     
 ## Các lỗi phát hiện mà không thể kiểm thử ##
 
