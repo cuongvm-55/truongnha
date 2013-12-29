@@ -52,7 +52,7 @@ III - Xếp loại, xét lên lớp (/20)
     1.2. Học lực Khá (3 ca kiểm thử)
     - 6.5 <= TB < 8.0, TB Văn hoặc TB Toán >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
     - TB >= 8.0, 6.5 <= TB Văn hoặc TB Toán < 8.0, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
-    - TB >= 8.0, 6.5 <= TB Văn hoặc TB Toán < 8.0, có 1 môn 5.0 <= TB <= 6.5, điểm Thể dục điểm Đạt
+    - TB >= 8.0, TB Văn hoặc TB Toán >= 6.5, có 1 môn 5.0 <= TB <= 6.5, điểm Thể dục điểm Đạt
     
     1.3. Học lực Trung Bình (3 ca kiểm thử)
     
@@ -74,7 +74,7 @@ III - Xếp loại, xét lên lớp (/20)
 
     2.1. Học sinh Giỏi (1 ca kiểm thử)
     
-    - Học lực giỏi, Hạnh kiểm Tốt
+    - Học lực Giỏi, Hạnh kiểm Tốt
     
     2.2. Học sinh Tiên Tiến (2 ca kiểm thử)
     
