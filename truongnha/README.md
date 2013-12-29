@@ -43,55 +43,55 @@ II - Nhập hạnh kiểm (/)
 
 II - Xếp loại, xét lên lớp (/)
 1. Kiểm thử Xét học lực (kiểm các điều kiện từ học lực Giỏi trở xuống đến học lực Kém) (21 ca kiểm thử)
-  1.1. Học lực Giỏi
-    * Đạt Học Lực Giỏi (2 ca kiểm thử)
-    - TB >= 8.0, TB Văn >= 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
-    - TB >= 8.0, TB Toán >= 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
-    * Không Đạt Học Lực Giỏi (4 ca kiểm thử)
-    - TB >= 8.0, TB Văn và TB Toán đều < 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
-    - TB >= 8.0, TB Toán >= 8.0, có 1 môn học TB <= 6.5, điểm Thể dục điểm Đạt
-    - TB >= 8.0, TB Toán >= 8.0, không có môn học nào TB <= 6.5, điểm Thể dục điểm Chưa Đạt
-    - TB < 8.0, TB Văn >= 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
-  1.2. Học lực Khá
-    *Đạt Học lực Khá (2 ca kiểm thử)
-    - TB >= 6.5, TB Văn >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
-    - TB >= 6.5, TB Toán >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
-    *Không Đạt Học lực Khá (4 ca kiểm thử)
-    - TB < 6.5, TB Toán >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
-    - TB >= 6.5, TB Toán và TB Văn < 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
-    - TB >= 6.5, TB Toán >= 6.5, có 1 môn TB < 5.0, điểm Thể dục điểm Đạt
-    - TB >= 6.5, TB Toán >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Chưa Đạt
-  1.3. Học lực Trung Bình
-    *Đạt Học lực Khá (2 ca kiểm thử)
-    - TB >= 5.0, TB Văn >= 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Đạt
-    - TB >= 5.0, TB Toán >= 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Đạt
-    *Không Đạt Học lực Khá (4 ca kiểm thử)
-    - TB < 5.0, TB Toán >= 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Đạt
-    - TB >= 5.0, TB Toán và TB Văn < 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Đạt
-    - TB >= 5.0, TB Toán >= 5.0, có 1 môn TB < 3.5, điểm Thể dục điểm Đạt
-    - TB >= 5.0, TB Toán >= 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Chưa Đạt
-  1.4. Học lực Yếu
-    *Đạt Học lực Yếu (2 ca kiểm thử)
-    - TB >= 3.5, không có môn nào TB <= 2.0
-    *Không Đạt Học lực Yếu (2 ca kiểm thử)
-    - TB < 3.5, không có môn nào TB <= 2.0
-    - TB >= 3.5, có 1 môn TB < 3.5
-  1.5. Học lực Kém (1 ca kiểm thử)
-    - TB < 3.5, có 1 môn TB < 3.5
+1.1. Học lực Giỏi
+* Đạt Học Lực Giỏi (2 ca kiểm thử)
+- TB >= 8.0, TB Văn >= 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
+- TB >= 8.0, TB Toán >= 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
+* Không Đạt Học Lực Giỏi (4 ca kiểm thử)
+- TB >= 8.0, TB Văn và TB Toán đều < 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
+- TB >= 8.0, TB Toán >= 8.0, có 1 môn học TB <= 6.5, điểm Thể dục điểm Đạt
+- TB >= 8.0, TB Toán >= 8.0, không có môn học nào TB <= 6.5, điểm Thể dục điểm Chưa Đạt
+- TB < 8.0, TB Văn >= 8.0, không có môn nào TB <= 6.5, điểm Thể dục điểm Đạt
+1.2. Học lực Khá
+*Đạt Học lực Khá (2 ca kiểm thử)
+- TB >= 6.5, TB Văn >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
+- TB >= 6.5, TB Toán >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
+*Không Đạt Học lực Khá (4 ca kiểm thử)
+- TB < 6.5, TB Toán >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
+- TB >= 6.5, TB Toán và TB Văn < 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Đạt
+- TB >= 6.5, TB Toán >= 6.5, có 1 môn TB < 5.0, điểm Thể dục điểm Đạt
+- TB >= 6.5, TB Toán >= 6.5, không có môn nào TB <= 5.0, điểm Thể dục điểm Chưa Đạt
+1.3. Học lực Trung Bình
+*Đạt Học lực Khá (2 ca kiểm thử)
+- TB >= 5.0, TB Văn >= 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Đạt
+- TB >= 5.0, TB Toán >= 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Đạt
+*Không Đạt Học lực Khá (4 ca kiểm thử)
+- TB < 5.0, TB Toán >= 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Đạt
+- TB >= 5.0, TB Toán và TB Văn < 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Đạt
+- TB >= 5.0, TB Toán >= 5.0, có 1 môn TB < 3.5, điểm Thể dục điểm Đạt
+- TB >= 5.0, TB Toán >= 5.0, không có môn nào TB <= 3.5, điểm Thể dục điểm Chưa Đạt
+1.4. Học lực Yếu
+*Đạt Học lực Yếu (2 ca kiểm thử)
+- TB >= 3.5, không có môn nào TB <= 2.0
+*Không Đạt Học lực Yếu (2 ca kiểm thử)
+- TB < 3.5, không có môn nào TB <= 2.0
+- TB >= 3.5, có 1 môn TB < 3.5
+1.5. Học lực Kém (1 ca kiểm thử)
+- TB < 3.5, có 1 môn TB < 3.5
 2. Kiểm thử xét lên lớp (Kiểm thử xét danh hiệu) (10 ca kiểm thử)
-  2.1. Học sinh Giỏi (1 ca kiểm thử)
-    - Học lực giỏi, Hạnh kiểm Tốt
-  2.2. Học sinh Tiên Tiến (2 ca kiểm thử)
-    - Học lực Giỏi, Hạnh kiểm Khá
-    - Học lực Khá, Hạnh kiểm Tốt
-  2.3. Không xếp loại danh hiệu (7 ca kiểm thử)
-    - Học lực Giỏi, Hạnh kiểm Trung Bình
-    - Học lực Giỏi, Hạnh kiểm Yếu
-    - Học lực Khá, Hạnh kiểm Trung Bình
-    - Học lực Khá, Hạnh kiểm Yếu
-    - Học lực Trung Bình
-    - Học lực Yếu
-    - Học lực Kém
+2.1. Học sinh Giỏi (1 ca kiểm thử)
+- Học lực giỏi, Hạnh kiểm Tốt
+2.2. Học sinh Tiên Tiến (2 ca kiểm thử)
+- Học lực Giỏi, Hạnh kiểm Khá
+- Học lực Khá, Hạnh kiểm Tốt
+2.3. Không xếp loại danh hiệu (7 ca kiểm thử)
+- Học lực Giỏi, Hạnh kiểm Trung Bình
+- Học lực Giỏi, Hạnh kiểm Yếu
+- Học lực Khá, Hạnh kiểm Trung Bình
+- Học lực Khá, Hạnh kiểm Yếu
+- Học lực Trung Bình
+- Học lực Yếu
+- Học lực Kém
     
 ## Các lỗi phát hiện mà không thể kiểm thử ##
 
