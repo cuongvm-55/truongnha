@@ -33,7 +33,7 @@ I - Nhập điểm (5/5)
 4. Nhập từ Excel (kiểm thử bằng tay) PASSED
 5. Xuất ra Excel (kiểm thử bằng tay) PASSED
 
-II - Nhập hạnh kiểm (/)
+II - Nhập hạnh kiểm (6/6)
 
 1. Kiểm thử nhập hạnh kiểm đúng chuẩn hiển thị(T,K,TB,Y)              PASSED
 2. Kiểm thử nhập hạnh kiểm đúng nhưng sai chuẩn hiển thị(t,k,b,y,...) PASSED
@@ -42,7 +42,7 @@ II - Nhập hạnh kiểm (/)
 5. Kiểm thử chức năng import File(kiểm thử bằng tay)  PASSED
 6. Kiểm thử chức năng export File(kiểm thử bằng tay)  PASSED
 
-III - Xếp loại, xét lên lớp (/)
+III - Xếp loại, xét lên lớp (5/5)
 
 1. Kiểm thử Xét học lực (kiểm các điều kiện từ học lực Giỏi trở xuống đến học lực Kém) (12 ca kiểm thử)
 
