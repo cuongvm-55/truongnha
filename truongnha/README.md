@@ -41,7 +41,7 @@ II - Nhập hạnh kiểm (/)
 5. Kiểm thử chức năng import File(kiểm thử bằng tay)  PASSED
 6. Kiểm thử chức năng export File(kiểm thử bằng tay)  PASSED
 
-III - Xếp loại, xét lên lớp (/20)
+III - Xếp loại, xét lên lớp (/21)
 
 1. Kiểm thử Xét học lực (kiểm các điều kiện từ học lực Giỏi trở xuống đến học lực Kém) (12 ca kiểm thử)
 
@@ -72,13 +72,13 @@ III - Xếp loại, xét lên lớp (/20)
     - 3.5 > TB
     - có 1 môn TB < 2.0, TB chung tùy ý
     
-2. Kiểm thử xét lên lớp (Kiểm thử xét danh hiệu) (8 ca kiểm thử)
+2. Kiểm thử xét lên lớp (Kiểm thử xét danh hiệu) (9 ca kiểm thử)
 
     2.1. Học sinh Giỏi (1 ca kiểm thử)
     
     - Học lực Giỏi, Hạnh kiểm Tốt
     
-    2.2. Học sinh Tiên Tiến (2 ca kiểm thử)
+    2.2. Học sinh Tiên Tiến (3 ca kiểm thử)
     
     - Học lực Giỏi, Hạnh kiểm Khá
     - Học lực Khá, Hạnh kiểm Tốt
